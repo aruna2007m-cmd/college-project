@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        EduGenie - AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="container">
+
+
+    <!-- HEADER -->
+
+    <header class="hero">
+
+        <div>
+
+            <p class="eyebrow">
+                AI LEARNING ASSISTANT
+            </p>
+
+            <h1>
+                EduGenie
+            </h1>
+
+            <p>
+                Learn smarter with your
+                AI-powered study companion.
+            </p>
+
+        </div>
+
+
+        <span
+            id="status"
+            class="status"
+        >
+            Ready
+        </span>
+
+    </header>
+
+
+
+    <!-- INPUT CARD -->
+
+    <section class="card">
+
+
+        <label for="task">
+
+            Choose a task
+
+        </label>
+
+
+       <select id="task">
+
+    <option value="qa">
+        Ask a Question
+    </option>
+
+    <option value="explain">
+        Explain a Concept
+    </option>
+
+    <option value="quiz">
+        Generate Quiz
+    </option>
+
+    <option value="summarize">
+        Summarize
+    </option>
+
+    <option value="learn">
+        Learning Path
+    </option>
+
+    <option value="schedule">
+        Study Schedule
+    </option>
+
+</select>
+
+
+
+        <label for="inputText">
+
+            Your Input
+
+        </label>
+
+
+        <textarea
+            id="inputText"
+            rows="10"
+            placeholder="Example: Explain the Pythagoras theorem to a beginner."
+        ></textarea>
+      <div id="scheduleFields" class="schedule-fields hidden">
+
+    <label for="subjects">
+        Subjects
+    </label>
+
+    <input
+        type="text"
+        id="subjects"
+        placeholder="Example: Python, Maths, Java"
+    >
+
+    <label for="studyHours">
+        Available Study Time
+    </label>
+
+    <input
+        type="text"
+        id="studyHours"
+        placeholder="Example: 3 hours per day"
+    >
+
+    <label for="examDate">
+        Exam Date
+    </label>
+
+    <input
+        type="date"
+        id="examDate"
+    >
+
+    <label for="importantTopics">
+        Important Topics
+    </label>
+
+    <textarea
+        id="importantTopics"
+        rows="4"
+        placeholder="Example: Python loops, Algebra, Java threads"
+    ></textarea>
+
+</div>
+  
+
+
+
+        <div class="actions">
+
+            <button
+                id="submitBtn"
+            >
+                Generate
+            </button>
+
+
+            <button
+                id="clearBtn"
+                class="secondary"
+            >
+                Clear
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- RESULT -->
+
+    <section
+        id="resultCard"
+        class="card result-card hidden"
+    >
+
+
+        <div class="result-header">
+
+            <h2>
+                Result
+            </h2>
+
+
+            <button
+                id="copyBtn"
+                class="secondary small"
+            >
+                Copy
+            </button>
+
+        </div>
+
+
+        <div id="result"></div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="/static/app.js"></script>
+
+
+</body>
+
+</html>
